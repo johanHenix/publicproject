@@ -1,0 +1,19 @@
+// lines prefixed with double slashes count as commentary.
+// the following test will just load a file during the setup phase
+// and make it available in the test context. Read the documentation
+// to know more about scripting. 
+METADATA :
+
+// UUID du cas de test
+linked-TC : ea857d81-acca-49f8-be1b-3024bdca8c71
+
+SETUP :
+
+//LOAD sample-resource.txt AS resource
+
+// here we test the macro defined in shortcuts/sample_shortcut.macro. Note that none of the instructions here are case sensitive :
+
+TEST :
+//# EXECUTE $({chmod 750  src/squashTA/resources/common_resources/geckodriver-v0.23.0-linux64.tar}) LOCALLY AS result
+//#  LOAD sample-dataset.xml TO XML DATASET dataset
+# EXECUTE_SELENIUM2 selenium_resources WITH MAIN CLASS autom.TestSelenium_OK
