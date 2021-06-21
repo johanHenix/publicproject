@@ -41,7 +41,7 @@ public class TestSelenium_OK {
         }
         catch(Exception ae) {
             System.err.println("Pas de Logo Google");
-            driver.close();
+           // driver.close();
             throw ae;
         }
        // Thread.sleep(100);
